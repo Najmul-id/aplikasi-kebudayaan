@@ -1,0 +1,152 @@
+/* ===============================
+   GLOBAL
+   =============================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* ===============================
+   HEADER LOGIN
+   =============================== */
+header {
+  background: #8b0000;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+header p {
+  margin-top: 8px;
+  color: #ffd700;
+  font-size: 16px;
+}
+
+/* ===============================
+   CONTAINER LOGIN
+   =============================== */
+.container {
+  background: #ffffff;
+  width: 350px;
+  max-width: 90%;
+  margin: 60px auto;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeSlide 0.8s ease;
+}
+
+.container h3 {
+  margin-bottom: 25px;
+  color: #8b0000;
+  font-size: 22px;
+}
+
+/* ===============================
+   INPUT
+   =============================== */
+.container input {
+  width: 90%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.container input:focus {
+  border-color: #8b0000;
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.15);
+}
+
+/* ===============================
+   BUTTON LOGIN
+   =============================== */
+.container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #ffd700;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===============================
+   BUTTON REGISTER LINK
+   =============================== */
+.btn-register {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #ffd700;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.btn-register:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   MESSAGE
+   =============================== */
+#loginMsg {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* ===============================
+   ANIMATION
+   =============================== */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

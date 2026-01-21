@@ -1,0 +1,366 @@
+/* ===============================
+   GLOBAL BODY + BACKGROUND IMAGE
+   =============================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url("https://upload.wikimedia.org/wikipedia/commons/9/9a/Indonesia_islands_map.png")
+              no-repeat center center / cover;
+  animation: bodyFade 1.2s ease;
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(139, 0, 0, 0.95);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation: slideDown 1s ease;
+}
+
+.navbar-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 0;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  animation: textGlow 2s ease infinite alternate;
+}
+
+.logo span {
+  color: #ffd700;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  animation: heroText 1.3s ease forwards;
+}
+
+/* ===============================
+   BUTTON
+   =============================== */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #ffd700;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+  animation: fadeUp 1.6s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+/* ===============================
+   SEARCH SECTION
+   =============================== */
+.search-section {
+  padding: 80px 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.search-section input {
+  width: 60%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+/* ===============================
+   SECTION BUDAYA, FESTIVAL, SENIMAN
+   =============================== */
+section {
+  padding: 60px 40px;
+}
+
+/* Common title styling */
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  position: relative;
+}
+
+/* Common grid for cards */
+.budaya-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* ===============================
+   CARD STYLING (BUDAYA / FESTIVAL / SENIMAN)
+   =============================== */
+.budaya-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section .budaya-card:hover {
+  transform: translateY(-8px) scale(1);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+.budaya-card img {
+  width: 100%;
+  height: 200px;        /* tinggi disamakan untuk semua card */
+  object-fit: cover;     /* menjaga proporsi gambar */
+  display: block;
+}
+
+
+.budaya-card h3 {
+  margin: 15px;
+}
+
+.budaya-card p {
+  margin: 0 15px 15px;
+  color: #555;
+}
+
+/* ===============================
+   SPECIFIC SECTION STYLING
+   =============================== */
+/* Budaya */
+#budaya {
+  background: #f0f8ff;
+}
+
+#budaya h2 {
+  color: #005f99;
+}
+
+#budaya h2::after {
+  background: #00bfff;
+}
+
+#budaya .budaya-card {
+  border-right: 5px solid #00bfff;
+}
+
+#budaya .budaya-card h3 {
+  color: #005f99;
+  font-weight: bold;
+}
+
+/* Festival */
+#festival {
+  background: linear-gradient(180deg, #fff7e0, #fdf1c4);
+}
+
+#festival h2 {
+  color: #ffd700;
+}
+
+#festival h2::after {
+  background: #ffd700;
+}
+
+#festival .budaya-card {
+  border-top: 5px solid #ffd700;
+}
+
+#festival .budaya-card h3 {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Seniman */
+#seniman {
+  background: #ffffff;
+}
+
+#seniman h2 {
+  color: #8b0000;
+}
+
+#seniman h2::after {
+  background: #8b0000;
+}
+
+#seniman .budaya-card {
+  border-left: 5px solid #8b0000;
+}
+
+#seniman .budaya-card h3 {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+
+/* =============================== */
+/* MODAL FIX UNTUK SCROLL KONTEN   */
+/* =============================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Tambahkan ini agar modal bisa discroll jika tinggi melebihi layar */
+  padding: 20px; /* Memberi jarak agar konten tidak nempel di tepi layar */
+  z-index: 100;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh; /* Batasi tinggi maksimal modal */
+  overflow-y: auto; /* Scroll jika konten terlalu tinggi */
+  animation: zoomIn 0.6s ease;
+  box-sizing: border-box;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* ===============================
+   ABOUT SECTION
+   =============================== */
+.about-section {
+  padding: 60px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+.footer {
+  padding: 20px;
+  background: #8b0000;
+  color: #fff;
+  text-align: center;
+  animation: fadeUp 1.5s ease;
+}
+
+/* ===============================
+   KEYFRAMES
+   =============================== */
+@keyframes bodyFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heroText { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes cardFade { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+@keyframes zoomIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+@keyframes textGlow { from { text-shadow: 0 0 5px rgba(255,215,0,0.4); } to { text-shadow:0 0 15px rgba(255,215,0,0.9);} }
+
+/* ===============================
+   SCROLL REVEAL
+   =============================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease, transform 0.9s ease; /* delay bisa tetap ada di JS */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
